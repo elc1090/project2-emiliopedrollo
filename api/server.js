@@ -128,9 +128,9 @@ const createQuestion = (req, res) => {
 
 
 const server = http.createServer((req, res) => {
-    console.log(req)
 
-    res.setHeader('Content-Type','text/plain')
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 
     switch (true) {
         case req.url.match(/^\/question/) !== null:
@@ -140,6 +140,7 @@ const server = http.createServer((req, res) => {
             verifyAnswer(req,res)
             break;
         default:
+            res.writeHead(200, {'Content-Type': 'text/plain'})
             res.write('Welcome','utf-8')
     }
 
