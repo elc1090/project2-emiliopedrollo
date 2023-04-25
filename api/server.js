@@ -109,9 +109,9 @@ const createQuestion = (req, res) => {
             [
                 subject["character"]
             ].concat(
-                [
+                shuffle([
                     ...new Set(jmespath.search(quotes, `[?character!='${subject["character"]}'].character`))
-                ].slice(0,2)
+                ], rand).slice(0,2)
             ),
             rand
         )
