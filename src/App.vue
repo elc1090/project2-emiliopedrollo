@@ -14,7 +14,7 @@ import Question from './components/Question.vue'
                         <img
                             class="v-img__img--cover w-100 bg-transparent"
                             height="80"
-                            alt="The One Quiz" src="./assets/logo.svg">
+                            alt="The One Quiz" src="assets/logo.svg">
                     </v-img>
                 </template>
 
