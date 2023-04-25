@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Options from "@/components/Options.vue";
+import Option from "./Option.vue";
 
 import {ref} from 'vue';
 
@@ -66,7 +66,7 @@ const props = defineProps({
                 <v-container class="text-center">
                     <v-row justify="center">
                         <v-col v-for="option in options" cols="12" sm="6">
-                            <Options
+                            <Option
                                 @clicked="sendResponse"
                                 v-bind:id="option.id"
                                 v-bind:name="option.name"/>
@@ -98,9 +98,6 @@ const props = defineProps({
                 </v-container>
             </main>
         </Component>
-        <template #fallback>
-            Loading...
-        </template>
     </Suspense>
 </template>
 

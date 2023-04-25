@@ -6,6 +6,7 @@
     "src/**/*.vue"
   ],
   "compilerOptions": {
+    "strictNullChecks": false,
     "baseUrl": "../the-one-quiz",
     "paths": {
       "@/*": ["./src/*"]
